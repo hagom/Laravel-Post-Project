@@ -29,15 +29,15 @@ class RegisterController extends Controller
 
         // Almacenamiento del usuario
 
-        User::create(){
+        User::create(
             [
                 'name' => $request->name,
                 'username' => $request->username,
                 'email' => $request->email,
                 'password' => Hash::make($request->password)
-            ]};
+            ]
+        );
 
-        dd($request);
         // Redireccionamiento
 
         // return redirect()->route('dashboard');
