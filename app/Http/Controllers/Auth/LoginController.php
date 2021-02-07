@@ -23,6 +23,6 @@ class LoginController extends Controller
             return back()->with('status', 'Invalid Login');
         }
 
-        return redirect()->redirect('dashboard');
+        return redirect()->route('dashboard');
     }
 }
