@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\Controller;
+// use App\Http\Controllers\PostController;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::get();
+        $posts = Post::get(); //creara una coleccion de todos los posts que estan almacenados en el sitio
 
         return view('posts.index', [
             'posts' => $posts
