@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::get(); //creara una coleccion de todos los posts que estan almacenados en el sitio
+        $posts = Post::paginate(2); //creara una coleccion de todos los posts que estan almacenados en el sitio
 
         return view('posts.index', [
             'posts' => $posts
